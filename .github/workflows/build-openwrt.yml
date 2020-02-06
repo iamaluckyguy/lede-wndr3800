@@ -70,9 +70,6 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: patch lean-sfe-fix-pbr.patch
-      run: cd openwrt && wget -O- https://github.com/coolsnowwolf/lede/commit/e6ef0d1d73a4b3d4feaae55c86d68474700526d1.patch | patch -p1
-
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
