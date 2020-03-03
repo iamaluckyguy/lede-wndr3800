@@ -11,5 +11,6 @@
 cd package/lean
 git clone https://github.com/pymumu/smartdns.git
 svn checkout https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-smartdns
+cd ../..
 ./scripts/feeds update -a
 ./scripts/feeds install -a
