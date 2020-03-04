@@ -8,6 +8,7 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
+sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' target/linux/ar71xx/Makefile
 cd package/lean
 git clone https://github.com/pymumu/smartdns.git
 svn checkout https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-smartdns
