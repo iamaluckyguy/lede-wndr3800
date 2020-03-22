@@ -10,6 +10,7 @@
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+wget -O- https://github.com/coolsnowwolf/lede/commit/e6ef0d1d73a4b3d4feaae55c86d68474700526d1.patch | patch -p1
 sed -i '/^config internal themes/ a\        option Bootstrap "/luci-static/bootstrap"\n        option Netgear "/luci-static/netgear"' feeds/luci/modules/luci-base/root/etc/config/luci
 #sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' target/linux/ar71xx/Makefile
 cd package/lean
