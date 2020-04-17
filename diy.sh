@@ -39,5 +39,8 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 sed -i 's/LUCI_DEPENDS:=+luci-compat +smartdns/LUCI_DEPENDS:=smartdns/g' feeds/luci/applications/luci-app-smartdns/Makefile
 sed -i 's/include ..\/..\/luci.mk/include $(TOPDIR)\/feeds\/luci\/luci.mk/g' feeds/luci/applications/luci-app-smartdns/Makefile
 
+cd ./package/lean/
+git clone https://github.com/fw876/helloworld.git
+cd ../..
 ./scripts/feeds update -a
 ./scripts/feeds install -a
