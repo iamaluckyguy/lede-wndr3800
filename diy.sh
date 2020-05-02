@@ -36,8 +36,8 @@ rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
 rm $WORKINGDIR/${LUCIBRANCH}.zip
 
 #更改luci.mk此行
-sed -i 's/LUCI_DEPENDS:=+luci-compat +smartdns/LUCI_DEPENDS:=+smartdns/g' feeds/luci/applications/luci-app-smartdns/Makefile
-sed -i 's/include ..\/..\/luci.mk/include $(TOPDIR)\/feeds\/luci\/luci.mk/g' feeds/luci/applications/luci-app-smartdns/Makefile
+#sed -i 's/LUCI_DEPENDS:=+luci-compat +smartdns/LUCI_DEPENDS:=+smartdns/g' feeds/luci/applications/luci-app-smartdns/Makefile
+#sed -i 's/include ..\/..\/luci.mk/include $(TOPDIR)\/feeds\/luci\/luci.mk/g' feeds/luci/applications/luci-app-smartdns/Makefile
 
 echo "src-git helloworld https://github.com/fw876/helloworld" >> feeds.conf.default
 
